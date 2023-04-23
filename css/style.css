@@ -1,0 +1,624 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: lightgray;
+}
+
+:root {
+    --Org-Color: rgba(139, 0, 0, 0.711);
+    --Black-Font: black;
+    --Red-Font: darkred;
+    --white-Font: white;
+    --Black-BG: #333;
+}
+
+/* HEADER================================================================ */
+header {
+    width: 100%;
+    padding: 10px;
+}
+
+.HEADER {
+    width: 100%;
+    height: 500px;
+    padding-left: 40px;
+    background: url('../Images/bg.svg')center right no-repeat;
+    background-size: auto;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.TopHeader {
+    width: 60%;
+    padding-left: 40px;
+    padding-top: 10px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Logo-TopHeader {
+    width: 15%;
+}
+
+.Logo-TopHeader img {
+    width: 100%;
+    display: block;
+}
+
+.Menu-TopHeader {
+    width: 85%;
+    display: flex;
+    justify-content: end;
+}
+
+.MainMenu-TopHeader {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainMenu-TopHeader li a {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.MainMenu-TopHeader li a:hover {
+    color: var(--Red-Font);
+}
+
+.BottomHeader {
+    width: 60%;
+    padding-bottom: 10px;
+}
+
+.AboutSite-BottomHeader {
+    width: 70%;
+}
+
+.AboutSite-BottomHeader h1 {
+    font-size: 50px;
+}
+
+.Learn-BottomHeader {
+    width: 20%;
+    padding-top: 40px;
+}
+
+.Learn-BottomHeader button {
+    width: 100%;
+    font-size: 16px;
+    padding: 15px 0;
+    border: none;
+    color: var(--white-Font);
+    background-color: var(--Org-Color);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.Learn-BottomHeader button:hover {
+    background-color: var(--Black-BG);
+    transition: 0.2s;
+}
+
+/* MAIN===================================================== */
+.Row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.LeftRow {
+    width: 50%;
+    height: 600px;
+    padding: 10px;
+}
+
+.MiddRow {
+    width: 25%;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 10px 0;
+}
+
+.Top-MiddRow {
+    padding-bottom: 5px;
+}
+
+.Bottom-MiddRow {
+    padding-top: 5px;
+}
+
+.Bottom-MiddRow .BoxRow {
+    background-color: red;
+}
+
+.RightRow {
+    width: 25%;
+    height: 600px;
+    padding: 10px;
+}
+
+.BoxRow {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.BoxRow img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: 0.3s;
+}
+
+.BoxRow:hover img {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.BoxRow::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.BoxRow:hover::before {
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+
+.BoxContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--white-Font);
+    padding: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.Top-BoxContainer {
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Top-BoxContainer .News {
+    width: 50%;
+    position: relative;
+    padding-left: 25px;
+}
+
+.Top-BoxContainer .Date {
+    width: 50%;
+    display: flex;
+    justify-content: End;
+}
+
+.Top-BoxContainer .News::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--Red-Font);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+.Top-BoxContainer .Title {
+    font-size: 25px;
+    white-space: pre-line;
+}
+
+.Bottom-BoxContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Par {
+    width: 60%;
+    white-space: pre-line;
+    font-size: 14px;
+}
+
+.Site {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 14px;
+    color: blue;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.MiddRow .BoxContainer .Title {
+    font-size: 14px;
+}
+
+.MiddRow .BoxContainer .par {
+    font-size: 12px;
+}
+
+/* Second Row------------------------------------------- */
+.LR-SecondRow,
+.RR-SecondRow {
+    height: 400px;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+.LR-SecondRow {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.RR-SecondRow {
+    padding-right: 10px;
+    padding-left: 0px;
+}
+
+.RR-SecondRow .BoxRow,
+.LR-SecondRow .BoxRow {
+    background-color: white;
+}
+
+.RR-SecondRow .BoxContainer,
+.LR-SecondRow .BoxContainer {
+    color: black;
+}
+
+.BoxRow:hover .RR-SecondRow .Site {
+    background-color: #333;
+}
+
+/* ==================================================== */
+
+br {
+    width: 100%;
+    padding: 20px 0;
+    font-weight: 20px;
+    color: black;
+}
+
+.FooterRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MenuFooter {
+    width: 50%;
+    height: 40px;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.MenuFooter li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 2px;
+}
+
+.MenuFooter li a {
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MenuFooter li span {
+    color: red;
+}
+
+.MenuFooter li:first-child span {
+    display: none;
+}
+
+.CopyRightFooter {
+    padding-right: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* PHONE========================================= */
+@media (max-width:767px) {
+    .HEADER {
+        width: 100%;
+        height: 300px;
+        background: url('../Images/bg.svg')right bottom no-repeat;
+        background-size: cover;
+        background-color: white;
+    }
+
+    .TopHeader {
+        width: 100%;
+        padding-right: 40px;
+        padding-top: 10px;
+    }
+
+    .MainMenu-TopHeader li a {
+        font-size: 14px;
+    }
+
+    .BottomHeader {
+        margin-bottom: 5px;
+    }
+
+    .AboutSite-BottomHeader h1 {
+        font-size: 30px;
+    }
+
+    .Learn-BottomHeader {
+        width: 25%;
+    }
+
+    .Learn-BottomHeader button {
+        font-size: 14px;
+    }
+
+    /* ==========MAin============= */
+    .Row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .LeftRow {
+        width: 100%;
+        height: 300px;
+    }
+
+    .MiddRow {
+        width: 100%;
+        height: 600px;
+        padding: 0 10px;
+    }
+
+    .Top-MiddRow {
+        width: 100%;
+    }
+
+    .Bottom-MiddRow {
+        width: 100%;
+    }
+
+    .RightRow {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* ======================================= */
+    .BoxContainer {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Top-BoxContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .Top-BoxContainer .Title {
+        font-size: 18px;
+    }
+
+    .Par {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .RR-SecondRow {
+        padding-left: 10px;
+    }
+
+    .MenuFooter li a {
+        font-size: 11px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TABLET======================================================= */
+@media (min-width:767px) and (max-width:1024px) {
+    .HEADER {
+        width: 100%;
+        height: 350px;
+        background-size: cover;
+    }
+
+    .TopHeader {
+        width: 80%;
+    }
+
+    .MainMenu-TopHeader li a {
+        font-size: 16px;
+    }
+
+    .BottomHeader {
+        margin-bottom: 5px;
+    }
+
+    .AboutSite-BottomHeader {
+        width: 100%;
+    }
+
+    .AboutSite-BottomHeader h1 {
+        font-size: 40px;
+    }
+
+    .Learn-BottomHeader {
+        width: 25%;
+    }
+
+    .Learn-BottomHeader button {
+        font-size: 14px;
+    }
+
+    /* ==================MAIN======== */
+    .Row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .LeftRow {
+        width: 100%;
+        height: 600px;
+    }
+
+    .MiddRow {
+        width: 50%;
+        height: 600px;
+        display: block;
+        padding-left: 10px;
+    }
+
+    .Top-MiddRow {
+        width: 100%;
+        height: 50%;
+    }
+
+    .Bottom-MiddRow {
+        width: 100%;
+        height: 50%;
+    }
+
+    .RightRow {
+        width: 50%;
+        height: 600px;
+    }
+
+    /* ============================= */
+    .BoxContainer {
+        padding: 20px;
+    }
+
+    .Top-BoxContainer {
+        width: 100%;
+    }
+
+    .Top-BoxContainer .Title {
+        font-size: 20px;
+    }
+
+    .Par {
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .LR-SecondRow,
+    .RR-SecondRow {
+        width: 50%;
+        height: 300px;
+    }
+
+    .RR-SecondRow {
+        padding-left: 10px;
+    }
+
+    .LR-SecondRow {
+        padding-right: 0px;
+    }
+
+
+
+
+}
